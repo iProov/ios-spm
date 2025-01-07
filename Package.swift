@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "iProov",
-    platforms: [.iOS(.v10)],
+    platforms: [.iOS(.v11)],
     products: [
         .library(
             name: "iProov",
@@ -14,24 +14,24 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "iProov",
-            url: "https://github.com/iProov/ios/releases/download/9.5.1/iProov.xcframework.zip",
-            checksum: "3332415af3e2d6bea1b70c432a58dd2676539bce7fec4e73f75c10e921b837b3"
-        ),
-        .binaryTarget(
-            name: "SocketIO",
-            url: "https://github.com/iProov/ios/releases/download/9.5.1/SocketIO.xcframework.zip",
-            checksum: "9486cf260a682f5869368498761cc9318a671e5039a4e283f5c97f4a785d54c1"
+            url: "https://github.com/iProov/ios/releases/download/10.0.0/iProov.xcframework.zip",
+            checksum: "2dfd539cca4612b1db666d19eaac355fb750953dc60ffb75fd4005ab2a82e939"
         ),
         .binaryTarget(
             name: "Starscream",
-            url: "https://github.com/iProov/ios/releases/download/9.5.1/Starscream.xcframework.zip",
-            checksum: "9da3b5390372a868120452b27720fc65d0086677f0abe075cbfc7c3cb18875de"
+            url: "https://github.com/iProov/ios/releases/download/10.0.0/Starscream.xcframework.zip",
+            checksum: "058c0d9826e77145596f2e12695532725a657703d8cff595313de7ae3def2f71"
+        ),
+        .binaryTarget(
+            name: "SwiftProtobuf",
+            url: "https://github.com/iProov/ios/releases/download/10.0.0/SwiftProtobuf.xcframework.zip",
+            checksum: "cc5983f843f4d85c4db89ec9fb393b01ebc92ebce8b0705c32ecd3e6c4b95284"
         ),
         .target(
             name: "iProovTargets",
             dependencies: [
                 .target(name: "iProov", condition: .when(platforms: .some([.iOS]))),
-                .target(name: "SocketIO", condition: .when(platforms: .some([.iOS]))),
+                .target(name: "SwiftProtobuf", condition: .when(platforms: .some([.iOS]))),
                 .target(name: "Starscream", condition: .when(platforms: .some([.iOS]))),
             ],
             path: "Sources",
