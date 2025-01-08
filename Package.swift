@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "iProov",
-    platforms: [.iOS(.v11)],
+    platforms: [.iOS(.v12)],
     products: [
         .library(
             name: "iProov",
@@ -14,13 +14,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "iProov",
-            url: "https://github.com/iProov/ios/releases/download/10.3.2/iProov.xcframework.zip",
-            checksum: "ce5023a578bfea9d5a878f9e6942bb83709b70d4adcad47bd161aee5492490cf"
+            url: "https://github.com/iProov/ios/releases/download/11.0.1/iProov.xcframework.zip",
+            checksum: "58bad978ffcd004621a67cb1f908303e98948a6411e3cd90a36c32058f85f2e5"
         ),
         .target(
             name: "iProovTargets",
             dependencies: [
-                .target(name: "iProov", condition: .when(platforms: .some([.iOS]))),
+                .target(name: "iProov", condition: .when(platforms: .some([.iOS])))
             ],
             path: "Sources",
             resources: [
