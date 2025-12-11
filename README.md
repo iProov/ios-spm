@@ -27,7 +27,7 @@ If you prefer, you can add iProov via your Package.swift file as follows:
 .package(
 	name: "iProov",
 	url: "https://github.com/iProov/ios-spm.git",
-	.upToNextMajor(from: "12.2.1")
+	.upToNextMajor(from: "13.1.0")
 ),
 ```
 
